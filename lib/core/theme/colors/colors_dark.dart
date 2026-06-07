@@ -4,7 +4,7 @@ abstract final class AppColorsDark {
   AppColorsDark._();
 
   // Main Colors
-  static const Color primary = Color(0xFF0082CD);
+  static const Color primary = Color(0xFFEC5F5F);
   static const Color secondary = Color(0xFF4DC9D1);
   static const Color tertiary = Color(0xFF8D5EF2);
 
@@ -42,11 +42,11 @@ abstract final class AppColorsDark {
 
   // Splash
   static const Color splashStart = Color(0xFF020617);
-  static const Color splashEnd = Color(0xFF0082CD);
+  static const Color splashEnd = Color(0xFFEC5F5F);
   static const Color splashIcon = Color(0xFFFFFFFF);
 
   // Onboarding
-  static const Color glowColor = Color(0xFF0082CD);
+  static const Color glowColor = Color(0xFFEC5F5F);
   static const Color dotActive = primary;
   static const Color dotInactive = Color(0xFF334155);
 

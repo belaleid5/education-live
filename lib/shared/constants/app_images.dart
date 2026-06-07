@@ -3,15 +3,16 @@
 abstract final class AppImages {
   AppImages._();
 
-  static const String noNetwork = 'assets/images/no_network.svg';
+  static const String logoApp = 'assets/images/logoApp.svg';
+   static const String noNetwork = 'assets/images/no_network.svg';
   static const String emptyState = 'assets/images/empty_state.svg';
 
-  static const String logoMark = 'assets/icons/Form Elements/Form Elements/Logo Mark.svg';
-  static const String logoText = 'assets/icons/Form Elements/Logo Text.svg';
+  static const String logoMark = 'assets/icons/Form Elements/logo_mark.png';
+  static const String logoText = 'assets/icons/Form Elements/logo_text.svg';
 
-  static const String ctaLargeIcon = 'assets/icons/Button/CTA Large-Icon.svg';
+  static const String ctaLargeIcon = 'assets/icons/Button/cta_large_icon.svg';
   
-  static const String playButton = 'assets/icons/Card/Play Button.svg';
+  static const String playButton = 'assets/icons/Card/play_button.svg';
 
   static const String checkBox = 'assets/icons/Icon/Fill/check-box.svg';
   static const String discoverFill = 'assets/icons/Icon/Fill/discover.svg';
@@ -26,7 +27,7 @@ abstract final class AppImages {
 
   static const String award = 'assets/icons/Icon/Outline/award.svg';
   static const String back = 'assets/icons/Icon/Outline/back.svg';
-  static const String calendar = 'assets/icons/Icon/Outline/calendar.svg';
+  static const String calendar = 'assets/icons/Outline/calendar.svg';
   static const String discoverOutline = 'assets/icons/Icon/Outline/discover.svg';
   static const String heart = 'assets/icons/Icon/Outline/heart.svg';
   static const String menuOutline = 'assets/icons/Icon/Outline/menu.svg';

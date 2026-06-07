@@ -23,7 +23,7 @@ dependencies:
   video_player: ^2.9.2
   image_picker: ^1.1.2
   intl: ^0.20.0
-  flutter_svg: ^2.0.10+1
+  flutter_svg: ^1.1.6
   connectivity_plus: ^6.0.5
   fluttertoast: ^9.0.0
   flutter_dotenv: ^6.0.0

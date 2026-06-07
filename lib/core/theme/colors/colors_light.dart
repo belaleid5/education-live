@@ -4,9 +4,9 @@ abstract final class AppColorsLight {
   AppColorsLight._();
 
   // Main Colors
-  static const Color primary = Color(0xFF0082CD); // Royal Blue
-  static const Color secondary = Color(0xFF4DC9D1); // Tosqa
-  static const Color tertiary = Color(0xFF8D5EF2); // Purple
+  static const Color primary = Color(0xFFEC5F5F);
+  static const Color secondary = Color(0xFF4DC9D1);
+  static const Color tertiary = Color(0xFF8D5EF2);
 
   static const Color selektonizerLaoding = Color(0xFFE5E7EB);
 
@@ -41,12 +41,12 @@ abstract final class AppColorsLight {
   static Color get border => stroke;
 
   // Splash
-  static const Color splashStart = Color(0xFF0082CD);
+  static const Color splashStart = Color(0xFFEC5F5F);
   static const Color splashEnd = Color(0xFF4DC9D1);
   static const Color splashIcon = Color(0xFFFFFFFF);
 
   // Onboarding
-  static const Color glowColor = Color(0x334DC9D1);
+  static const Color glowColor = Color(0x33EC5F5F);
   static const Color dotActive = primary;
   static const Color dotInactive = Color(0xFFD1D5DB);
 
