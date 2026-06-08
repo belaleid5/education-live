@@ -50,6 +50,9 @@ flutter:
     - assets/icons/Card/
     - assets/icons/Form Elements/
     - assets/icons/Icon/
+    - lang/ar.json
+    - lang/en.json
+
     - .env.dev
     - .env.prod
 
