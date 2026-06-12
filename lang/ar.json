@@ -30,5 +30,10 @@
   "log_out": "تسجيل خروج",
   "or": "او",
   "login_with_facebook": "التسجيل بواسطة الفيس بوك",
-  "login_with_google": "التسجيل بواسطة  جوجل"
+  "login_with_google": "التسجيل بواسطة  جوجل",
+  "full_name": "الأسم الكامل",
+  "agree_to_terms_prefix": "بإنشائك للحساب فإنك توافق على ",
+  "terms_of_service": "شروط الخدمة",
+  "and": "و",
+  "privacy_policy": "سياسة الخصوصية"
 }

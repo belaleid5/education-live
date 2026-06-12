@@ -1,15 +1,41 @@
-import 'package:education_live_app/core/theme/colors/my_colors.dart';
+import 'package:education_live_app/core/di/service_locator.dart';
+import 'package:education_live_app/core/routes/routes_names.dart';
+import 'package:education_live_app/features/auth/presentation/bloc/email_auth/email_auth_bloc.dart';
+import 'package:education_live_app/features/auth/presentation/bloc/email_auth/email_auth_state.dart';
+import 'package:education_live_app/features/auth/presentation/bloc/social_auth/social_auth_bloc.dart';
 import 'package:education_live_app/features/auth/presentation/refactors/login_body.dart';
+import 'package:education_live_app/shared/extensions/context_extensions.dart';
+import 'package:education_live_app/shared/extensions/custom_toast_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: context.colors.background,
-      body: LoginBody(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => sl<EmailAuthBloc>()),
+        BlocProvider(create: (_) => sl<SocialAuthBloc>()),
+      ],
+      child: MultiBlocListener(
+        listeners: [
+          BlocListener<EmailAuthBloc, EmailAuthState>(
+            listener: (context, state) {
+              if (state is EmailAuthSuccess) {
+                context.pushReplacementNamed(AppRoutesNames.home);
+              }
+              if (state is EmailAuthError) {
+                CustomToastExtensions.showError(context, state.message);
+              }
+            },
+          ),
+      
+         
+        ],
+        child: const Scaffold(body: LoginBody()),
+      ),
     );
   }
 }

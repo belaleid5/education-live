@@ -21,7 +21,10 @@ class EnvVariable {
 
   String get envType => _envType;
 
-  bool get isDebugMode => _envType == 'dev';
+  bool get isDebugMode => _envType == 'development';
+
+  String get supabaseUrl => dotenv.get('SUPABASE_URL');
+  String get supabaseAnonKey => dotenv.get('SUPABASE_ANON_KEY');
 
   String get stripePublishableKey => dotenv.get('stripePublishableKey');
   String get stripeSecretKey => dotenv.get('stripeSecretKey');

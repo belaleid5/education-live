@@ -1,4 +1,6 @@
 import 'package:education_live_app/core/language/lang_keys.dart';
+import 'package:education_live_app/core/routes/routes_names.dart';
+import 'package:education_live_app/core/theme/colors/my_colors.dart';
 import 'package:education_live_app/features/auth/presentation/widgets/forgot_passwod_button.dart';
 import 'package:education_live_app/features/auth/presentation/widgets/login_auth_section.dart';
 import 'package:education_live_app/features/auth/presentation/widgets/login_button_with_face_book.dart';
@@ -30,10 +32,19 @@ class LoginBody extends StatelessWidget {
         SliverToBoxAdapter(child: verticalSpace(10)),
         SliverToBoxAdapter(child: LoginWithGoogle()),
         SliverToBoxAdapter(child: verticalSpace(50)),
-        SliverToBoxAdapter(child: TextAndButtonText(
-             title: context.translate(LangKeys.dontHaveAccount),
-            textButton:  context.translate(LangKeys.signUp))),
+        
+        SliverToBoxAdapter(
+          child: TextAndButtonText(
+            onTap: () {
+              context.pushReplacementNamed(AppRoutesNames.register);
+            },
+            title: context.translate(LangKeys.dontHaveAccount),
+            textButton: context.translate(LangKeys.signUp),
+          ),
+        ),
       ],
     );
   }
 }
+
+

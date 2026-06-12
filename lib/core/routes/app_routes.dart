@@ -1,5 +1,6 @@
 // core/routes/app_routes.dart
 import 'package:education_live_app/features/auth/presentation/pages/login_page.dart';
+import 'package:education_live_app/features/auth/presentation/pages/sign_up_page.dart';
 import 'package:education_live_app/features/splash/presentation/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'routes_names.dart';
@@ -24,9 +25,7 @@ class AppRouter {
       case AppRoutesNames.register:
         return _buildRoute(
           settings,
-          const Scaffold(
-            body: Center(child: Text('Register Screen')),
-          ),
+          const SignUpPage()
         );
 
       case AppRoutesNames.main:

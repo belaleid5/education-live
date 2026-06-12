@@ -1,6 +1,7 @@
 import 'package:education_live_app/core/theme/colors/my_colors.dart';
 import 'package:education_live_app/shared/utils/spacing.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart'; // ← أضف الـ import
 
 enum AppButtonType { primary, secondary, outline, text, social }
 
@@ -56,15 +57,11 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = context.colors;
 
-    final loadingWidget = SizedBox(
-      width: 22,
-      height: 22,
-      child: CircularProgressIndicator(
-        strokeWidth: 2.5,
-        color: type == AppButtonType.primary
-            ? colors.white
-            : colors.primary,
-      ),
+    final loadingWidget = SpinKitFoldingCube(
+      size: 24,
+      color: type == AppButtonType.primary
+          ? colors.white
+          : colors.primary,
     );
 
     final labelWidget = Row(

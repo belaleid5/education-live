@@ -34,6 +34,8 @@ dependencies:
   liquid_glass_bottom_bar: ^0.0.6
   shared_preferences: ^2.5.3
   flutter_secure_storage: ^10.0.0
+  equatable:
+  google_sign_in: ^7.2.0
 
 dev_dependencies:
   flutter_test:

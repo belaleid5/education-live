@@ -6,9 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class TextAndButtonText extends StatelessWidget {
-  const TextAndButtonText({super.key, required this.title, required this.textButton});
+  const TextAndButtonText({
+    super.key,
+    required this.title,
+    required this.textButton, required this.onTap,
+  });
   final String title;
   final String textButton;
+  final void Function() onTap;
   @override
   Widget build(BuildContext context) {
     return RichText(
@@ -26,7 +31,7 @@ class TextAndButtonText extends StatelessWidget {
               color: context.colors.secondary,
               fontSize: 16,
             ),
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()..onTap = onTap,
           ),
         ],
       ),

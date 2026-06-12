@@ -9,7 +9,9 @@ import 'package:education_live_app/shared/widgets/custom_image.dart';
 import 'package:flutter/material.dart';
 
 class SplashBody extends StatelessWidget {
-  const SplashBody({super.key});
+  final VoidCallback? onGetStarted;
+
+  const SplashBody({super.key, this.onGetStarted});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +65,7 @@ class SplashBody extends StatelessWidget {
             child: AppButton(
               backgroundColor: context.colors.primary,
               label: context.translate(LangKeys.getStarted),
-              onPressed: () {},
+              onPressed: onGetStarted,
             ),
           ).animateBottomToTop(),
         ],

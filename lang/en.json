@@ -29,6 +29,11 @@
   "dark_mode": "Dark Mode",
   "log_out": "Logout",
   "or": "OR",
-  "login_with_facebook" :"Log in with Facebook",
-  "login_with_google" :"Log in with Google"
+  "login_with_facebook": "Log in with Facebook",
+  "login_with_google": "Log in with Google",
+  "full_name": "Full Name",
+  "agree_to_terms_prefix": "By signing up you accept the ",
+  "terms_of_service": "Terms of Service",
+  "and": "and",
+  "privacy_policy": "Privacy Policy"
 }

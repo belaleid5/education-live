@@ -31,7 +31,15 @@ abstract final class LangKeys {
   static const String youHaveAccount = 'you_have_account';
   static const String or = 'or';
   static const String loginWithFaceBook = "login_with_facebook";
-   static const String loginWithGoogle = "login_with_google";
+  static const String loginWithGoogle = "login_with_google";
+  static const String fullName = "full_name";
+
+  // Terms & Conditions
+  static const String agreeToTermsPrefix = 'agree_to_terms_prefix';
+  static const String termsOfService = 'terms_of_service';
+  static const String and = 'and';
+  static const String privacyPolicy = 'privacy_policy';
+
   // Validation
   static const String validEmail = 'valid_email';
   static const String validPassword = 'valid_passwrod';
