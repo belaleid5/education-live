@@ -27,5 +27,8 @@
   "error_default": "Something went wrong, please try again",
   "profile": "Profile",
   "dark_mode": "Dark Mode",
-  "log_out": "Logout"
+  "log_out": "Logout",
+  "or": "OR",
+  "login_with_facebook" :"Log in with Facebook",
+  "login_with_google" :"Log in with Google"
 }

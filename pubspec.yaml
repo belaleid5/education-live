@@ -50,6 +50,8 @@ flutter:
     - assets/icons/Card/
     - assets/icons/Form Elements/
     - assets/icons/Icon/
+    - assets/icons/Icon/Outline/
+    - assets/icons/Icon/Fill/
     - lang/ar.json
     - lang/en.json
 

@@ -61,4 +61,10 @@ abstract final class AppColorsDark {
   // Shimmer
   static const Color shimmerBase = Color(0xFF1E293B);
   static const Color shimmerHighlight = Color(0xFF334155);
+
+
+   //button
+  static const Color royalBlueColor = Color(0xff0082CD);
+  Color get googleButtonText => const Color(0xFFffffff);
+  
 }

@@ -19,7 +19,7 @@ abstract final class AppColorsLight {
   static const Color shades = Color(0xFFFFFFFF);
   static const Color button = primary;
   static const Color icon = primary;
-  static const Color background = Color(0xFFF8FAFC);
+  static const Color background = Color(0xffFFFFFF);
   static const Color divider = Color(0xFFE5E7EB);
   static const Color rate = Color(0xFFFCD034);
 
@@ -51,7 +51,7 @@ abstract final class AppColorsLight {
   static const Color dotInactive = Color(0xFFD1D5DB);
 
   // Forms
-  static const Color fieldBackground = Color(0xFFFFFFFF);
+  static const Color fieldBackground = Color(0xFFE5E5E5);
   static const Color fieldBorder = Color(0xFFE5E7EB);
   static const Color checkboxActive = primary;
   static const Color linkColor = primary;
@@ -61,4 +61,8 @@ abstract final class AppColorsLight {
   // Shimmer
   static const Color shimmerBase = Color(0xFFF1F5F9);
   static const Color shimmerHighlight = Color(0xFFFFFFFF);
+
+  //button
+  static const Color royalBlueColor = Color(0xff0082CD);
+  Color get googleButtonText => const Color(0xFF000000);
 }

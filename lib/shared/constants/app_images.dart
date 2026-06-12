@@ -32,7 +32,7 @@ abstract final class AppImages {
   static const String heart = 'assets/icons/Icon/Outline/heart.svg';
   static const String menuOutline = 'assets/icons/Icon/Outline/menu.svg';
   static const String messageOutline = 'assets/icons/Icon/Outline/message.svg';
-  static const String passwordHide = 'assets/icons/Icon/Outline/password-hide.svg';
+  static const String passwordHide = 'assets/icons/Icon/Outline/hide.svg';
   static const String profileOutline = 'assets/icons/Icon/Outline/profile.svg';
   static const String search = 'assets/icons/Icon/Outline/search.svg';
   static const String stopwatch = 'assets/icons/Icon/Outline/stopwatch.svg';
