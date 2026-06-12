@@ -29,7 +29,9 @@ abstract final class LangKeys {
   static const String welcomeBack = 'welcome_back';
   static const String dontHaveAccount = 'dont_have_account';
   static const String youHaveAccount = 'you_have_account';
-
+  static const String or = 'or';
+  static const String loginWithFaceBook = "login_with_facebook";
+   static const String loginWithGoogle = "login_with_google";
   // Validation
   static const String validEmail = 'valid_email';
   static const String validPassword = 'valid_passwrod';

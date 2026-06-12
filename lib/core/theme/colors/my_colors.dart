@@ -34,6 +34,7 @@ class MyColors extends ThemeExtension<MyColors> {
   final Color invalidIcon;
   final Color shimmerBase;
   final Color shimmerHighlight;
+  final Color royalBlueColor;
 
   const MyColors({
     required this.primary,
@@ -67,6 +68,7 @@ class MyColors extends ThemeExtension<MyColors> {
     required this.invalidIcon,
     required this.shimmerBase,
     required this.shimmerHighlight,
+    required this.royalBlueColor,
   });
 
   static const light = MyColors(
@@ -101,6 +103,7 @@ class MyColors extends ThemeExtension<MyColors> {
     invalidIcon: AppColorsLight.invalidIcon,
     shimmerBase: AppColorsLight.shimmerBase,
     shimmerHighlight: AppColorsLight.shimmerHighlight,
+    royalBlueColor: AppColorsLight.royalBlueColor,
   );
 
   static const dark = MyColors(
@@ -135,6 +138,7 @@ class MyColors extends ThemeExtension<MyColors> {
     invalidIcon: AppColorsDark.invalidIcon,
     shimmerBase: AppColorsDark.shimmerBase,
     shimmerHighlight: AppColorsDark.shimmerHighlight,
+    royalBlueColor: AppColorsDark.royalBlueColor,
   );
 
   @override
@@ -170,6 +174,7 @@ class MyColors extends ThemeExtension<MyColors> {
     Color? invalidIcon,
     Color? shimmerBase,
     Color? shimmerHighlight,
+    Color? royalBlueColor,
   }) {
     return MyColors(
       primary: primary ?? this.primary,
@@ -177,6 +182,7 @@ class MyColors extends ThemeExtension<MyColors> {
       tertiary: tertiary ?? this.tertiary,
       textPrimary: textPrimary ?? this.textPrimary,
       textSecondary: textSecondary ?? this.textSecondary,
+      royalBlueColor: royalBlueColor ?? this.royalBlueColor,
       selektonizerLaoding: selektonizerLaoding ?? this.selektonizerLaoding,
       stroke: stroke ?? this.stroke,
       shades: shades ?? this.shades,
@@ -215,6 +221,7 @@ class MyColors extends ThemeExtension<MyColors> {
       tertiary: Color.lerp(tertiary, other.tertiary, t)!,
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
+      royalBlueColor: Color.lerp(royalBlueColor, other.royalBlueColor, t)!,
       selektonizerLaoding: Color.lerp(
         selektonizerLaoding,
         other.selektonizerLaoding,

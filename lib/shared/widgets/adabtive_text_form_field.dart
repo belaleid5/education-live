@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 class AdaptiveInputField extends StatelessWidget {
   const AdaptiveInputField({
     required this.context,
-    required this.controller,
+    this.controller,
     this.validate,
     super.key,
     this.title,
@@ -46,7 +46,7 @@ class AdaptiveInputField extends StatelessWidget {
   });
 
   final BuildContext context;
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String? title;
   final double heightAfterIt;
   final bool readOnly;
@@ -101,7 +101,7 @@ class AdaptiveInputField extends StatelessWidget {
           keyboardType: keyboardType,
           onTapOutside: doOnTapOutside
               ? (PointerDownEvent event) =>
-                    FocusManager.instance.primaryFocus?.unfocus()
+                  FocusManager.instance.primaryFocus?.unfocus()
               : null,
           obscureText: isPassword,
           textDirection: textDirection,
@@ -139,10 +139,9 @@ class AdaptiveInputField extends StatelessWidget {
               fontWeight: FontWeight.w400,
               fontSize: 14,
             ),
-            errorStyle: Theme.of(
-              context,
-            ).textTheme.labelSmall?.copyWith(color: colors.button),
-
+            errorStyle: Theme.of(context).textTheme.labelSmall?.copyWith(
+              color: colors.button,
+            ),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: effectiveBorderColor),
               borderRadius: BorderRadius.circular(radius),
@@ -160,10 +159,14 @@ class AdaptiveInputField extends StatelessWidget {
               borderRadius: BorderRadius.circular(radius),
             ),
             disabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: colors.stroke.withOpacity(0.5)),
+              borderSide: BorderSide(
+                color: colors.stroke.withOpacity(0.5),
+              ),
               borderRadius: BorderRadius.circular(radius),
             ),
             prefixIcon: prefix,
+            prefixIconConstraints: const BoxConstraints(),
+           
             suffixIcon: suffix != null
                 ? IconButton(
                     onPressed: suffixPressed,
@@ -171,6 +174,10 @@ class AdaptiveInputField extends StatelessWidget {
                     color: suffixColor ?? colors.icon,
                   )
                 : null,
+            suffixIconConstraints: const BoxConstraints(
+              minHeight: 48,
+              minWidth: 48,
+            ),
           ),
         ),
         SizedBox(height: heightAfterIt),

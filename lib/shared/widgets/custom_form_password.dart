@@ -39,6 +39,7 @@ class _CustomTextFormPasswordState extends State<CustomTextFormPassword> {
   Widget build(BuildContext context) {
     return AdaptiveInputField(
       context: context,
+      textAlign: TextAlign.end,
       controller: widget.controller,
       title: widget.title,
       hintText:
@@ -52,14 +53,19 @@ class _CustomTextFormPasswordState extends State<CustomTextFormPassword> {
       autofocus: widget.autofocus,
       focusNode: widget.focusNode,
       maxLines: 1,
-      suffix: Icon(
-        _isPasswordVisible
-            ? Icons.visibility_off_outlined
-            : Icons.visibility_outlined,
-        size: 20,
+      prefix: GestureDetector(
+        onTap: _togglePasswordVisibility,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Icon(
+            _isPasswordVisible
+                ? Icons.visibility_off_outlined
+                : Icons.visibility_outlined,
+            size: 20,
+            color: context.colors.icon,
+          ),
+        ),
       ),
-      suffixColor: context.colors.icon,
-      suffixPressed: _togglePasswordVisibility,
     );
   }
 }
