@@ -8,19 +8,20 @@ import 'package:education_live_app/features/concetvitiy/ui/connectivity_controll
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:supabase_flutter/supabase_flutter.dart'; 
-
+import 'package:supabase_flutter/supabase_flutter.dart';  
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EnvVariable.instance.init(EnvType.dev);
-  await ConnectivityController.instance.init();
-  await SharedPref().init();
+
+
   await Supabase.initialize(
-    url: EnvVariable.instance.supabaseUrl,     
-    anonKey: EnvVariable.instance.supabaseAnonKey, 
+    url: EnvVariable.instance.supabaseUrl,
+    anonKey: EnvVariable.instance.supabaseAnonKey,
   );
 
+  await ConnectivityController.instance.init();
+  await SharedPref().init();
   await setupDI();
   Bloc.observer = AppBlocObserver();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
@@ -32,9 +33,3 @@ void main() async {
     ),
   );
 }
-
-
-
-
-
-

@@ -1,6 +1,7 @@
 import 'package:education_live_app/core/routes/routes_names.dart';
 import 'package:education_live_app/core/theme/colors/my_colors.dart';
 import 'package:education_live_app/features/splash/presentation/refactor/splash_body.dart';
+import 'package:education_live_app/shared/extensions/context_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -25,21 +26,35 @@ class _SplashPageState extends State<SplashPage> {
 
     if (!mounted) return;
 
-    final session = Supabase.instance.client.auth.currentSession;
+    final auth = Supabase.instance.client.auth;
+    Session? session = auth.currentSession;
+
+
+    if (session != null && session.isExpired) {
+      try {
+        final response = await auth.refreshSession();
+        session = response.session;
+      } catch (_) {
+        session = null;
+      }
+    }
+
+    if (!mounted) return;
 
     if (session != null) {
-   
-      Navigator.pushReplacementNamed(context, AppRoutesNames.home);
+    
+
+      context.pushReplacementNamed( AppRoutesNames.home);
     } else {
-   
       setState(() {
         _showSplashBody = true;
       });
     }
   }
 
+
   void _navigateToLogin() {
-    Navigator.pushReplacementNamed(context, AppRoutesNames.login);
+    context.pushReplacementNamed( AppRoutesNames.login);
   }
 
   @override
@@ -53,7 +68,6 @@ class _SplashPageState extends State<SplashPage> {
       );
     }
 
-  
     return Scaffold(
       backgroundColor: context.colors.background,
       body: SplashBody(onGetStarted: _navigateToLogin),
