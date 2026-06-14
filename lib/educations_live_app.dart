@@ -40,7 +40,7 @@ class EducationsLiveApp extends StatelessWidget {
 
                 return MaterialApp(
                   debugShowCheckedModeBanner: EnvVariable.instance.isDebugMode,
-                  initialRoute: AppRoutesNames.login,
+                  initialRoute: AppRoutesNames.forgotPassword,
                   onGenerateRoute: AppRouter.onGenerateRoute,
 
                   theme: AppTheme.buildLight(langCode),

@@ -1,4 +1,6 @@
 // core/routes/app_routes.dart
+import 'package:education_live_app/core/routes/custom_page_route.dart';
+import 'package:education_live_app/features/auth/presentation/pages/forgot_passwrd.dart';
 import 'package:education_live_app/features/auth/presentation/pages/login_page.dart';
 import 'package:education_live_app/features/auth/presentation/pages/sign_up_page.dart';
 import 'package:education_live_app/features/splash/presentation/pages/splash_page.dart';
@@ -11,50 +13,37 @@ class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRoutesNames.splash:
-        return _buildRoute(
-          settings,
-           SplashPage(),
-        );
+        return _buildRoute(settings, SplashPage());
 
       case AppRoutesNames.login:
-        return _buildRoute(
-          settings,
-          const  LoginPage()
-        );
+        return _buildRoute(settings, const LoginPage());
 
       case AppRoutesNames.register:
-        return _buildRoute(
-          settings,
-          const SignUpPage()
-        );
+        return _buildRoute(settings, const SignUpPage());
+
+      case AppRoutesNames.forgotPassword:
+        return _buildRoute(settings, const ForgotPassword());
 
       case AppRoutesNames.main:
         return _buildRoute(
           settings,
-          const Scaffold(
-            body: Center(child: Text('Main Screen')),
-          ),
+          const Scaffold(body: Center(child: Text('Main Screen'))),
         );
 
       default:
         return _buildRoute(
           settings,
           Scaffold(
-            body: Center(
-              child: Text('No route defined for ${settings.name}'),
-            ),
+            body: Center(child: Text('No route defined for ${settings.name}')),
           ),
         );
     }
   }
 
-  static MaterialPageRoute _buildRoute(
-    RouteSettings settings,
-    Widget page,
-  ) {
-    return MaterialPageRoute(
-      settings: settings,
-      builder: (_) => page,
+  static CustomPageRoute _buildRoute(RouteSettings settings, Widget page) {
+    return CustomPageRoute(
+      settings: settings,  
+      page: page,
     );
   }
 }
