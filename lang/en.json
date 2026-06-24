@@ -35,5 +35,10 @@
   "agree_to_terms_prefix": "By signing up you accept the ",
   "terms_of_service": "Terms of Service",
   "and": "and",
-  "privacy_policy": "Privacy Policy"
+  "privacy_policy": "Privacy Policy",
+  "reset_password_instructions": "No worries, enter your email and we'll\nsend you reset instructions.",
+  "reset_password_email_info": "We'll email you a secure password\nreset link powered by Supabase Auth.",
+  "back_to_login": "← Back to Login",
+  "check_inbox_message": "Check your inbox and spam folder after \nrequesting the reset link.",
+  "reset_password": "Reset Password"
 }

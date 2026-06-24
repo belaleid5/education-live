@@ -1,6 +1,6 @@
 // core/routes/app_routes.dart
 import 'package:education_live_app/core/routes/custom_page_route.dart';
-import 'package:education_live_app/features/auth/presentation/pages/forgot_passwrd.dart';
+import 'package:education_live_app/features/auth/presentation/pages/forgot_password.dart';
 import 'package:education_live_app/features/auth/presentation/pages/login_page.dart';
 import 'package:education_live_app/features/auth/presentation/pages/sign_up_page.dart';
 import 'package:education_live_app/features/splash/presentation/pages/splash_page.dart';

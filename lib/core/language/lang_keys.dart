@@ -34,6 +34,13 @@ abstract final class LangKeys {
   static const String loginWithGoogle = "login_with_google";
   static const String fullName = "full_name";
 
+ 
+  static const String resetPassword = 'reset_password';
+  static const String resetPasswordInstructions = 'reset_password_instructions';
+  static const String resetPasswordEmailInfo = 'reset_password_email_info';
+  static const String backToLogin = 'back_to_login';
+  static const String checkInboxMessage = 'check_inbox_message';
+
   // Terms & Conditions
   static const String agreeToTermsPrefix = 'agree_to_terms_prefix';
   static const String termsOfService = 'terms_of_service';

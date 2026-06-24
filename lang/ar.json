@@ -35,5 +35,10 @@
   "agree_to_terms_prefix": "بإنشائك للحساب فإنك توافق على ",
   "terms_of_service": "شروط الخدمة",
   "and": "و",
-  "privacy_policy": "سياسة الخصوصية"
+  "privacy_policy": "سياسة الخصوصية",
+  "reset_password_instructions": "لا تقلق، أدخل بريدك الإلكتروني وسنرسل لك\nتعليمات إعادة التعيين.",
+  "reset_password_email_info": "سنرسل لك رابط إعادة تعيين كلمة مرور آمن .",
+  "back_to_login": "← العودة لتسجيل الدخول",
+  "check_inbox_message": "تحقق من الوارد والبريد المزعج بعد\nطلب رابط إعادة التعيين.",
+  "reset_password": "إعادة تعيين كلمة المرور"
 }

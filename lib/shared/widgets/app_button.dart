@@ -1,7 +1,7 @@
 import 'package:education_live_app/core/theme/colors/my_colors.dart';
 import 'package:education_live_app/shared/utils/spacing.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart'; // ← أضف الـ import
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 enum AppButtonType { primary, secondary, outline, text, social }
 
@@ -17,6 +17,7 @@ class AppButton extends StatelessWidget {
   final double height;
   final Color? backgroundColor;
   final Color? textColor;
+  final Color? borderColor;       
   final double borderRadius;
   final double fontSize;
 
@@ -33,6 +34,7 @@ class AppButton extends StatelessWidget {
     this.height = 56,
     this.backgroundColor,
     this.textColor,
+    this.borderColor,            
     this.borderRadius = 12,
     this.fontSize = 16,
   });
@@ -43,6 +45,7 @@ class AppButton extends StatelessWidget {
     required this.prefixIcon,
     this.onPressed,
     this.isLoading = false,
+    this.borderColor,              
   })  : type = AppButtonType.social,
         isFullWidth = true,
         suffixIcon = null,
@@ -128,7 +131,7 @@ class AppButton extends StatelessWidget {
             style: OutlinedButton.styleFrom(
               foregroundColor: textColor ?? colors.primary,
               side: BorderSide(
-                color: backgroundColor ?? colors.primary,
+                color: borderColor ?? backgroundColor ?? colors.primary, 
               ),
               shape: shape,
             ),
@@ -146,7 +149,9 @@ class AppButton extends StatelessWidget {
             style: OutlinedButton.styleFrom(
               backgroundColor: colors.fieldBackground,
               foregroundColor: colors.textPrimary,
-              side: BorderSide(color: colors.fieldBorder),
+              side: BorderSide(
+                color: borderColor ?? colors.fieldBorder, 
+              ),
               shape: shape,
             ),
             child: child,

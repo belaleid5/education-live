@@ -14,15 +14,22 @@ class OrTextSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       child: Row(
         children: [
-          Expanded(child: Divider(thickness: 1, color: context.colors.divider)),
+          Expanded(
+            child: Divider(thickness: 1.5, color: context.colors.divider),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
               context.translate(LangKeys.or),
-              style: TextStyle(color: context.colors.divider),
+              style: context.textStyle.copyWith(
+                color: context.colors.divider,
+                fontSize: 16,
+              ),
             ),
           ),
-          Expanded(child: Divider(thickness: 1, color: context.colors.divider)),
+          Expanded(
+            child: Divider(thickness: 1.5, color: context.colors.divider),
+          ),
         ],
       ),
     ).animateScaleNFadeHorizontal(delay: 1300.ms, duration: 900.ms);
